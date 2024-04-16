@@ -34,12 +34,7 @@ body {
     padding: 20px;
   }
   
-  footer {
-    background-color: #3f86a7;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-  }
+
   
   footer ul {
     list-style-type: none;
@@ -56,3 +51,23 @@ body {
     text-decoration: none;
   }
   
+  footer {
+    background-color: #3f86a7;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }

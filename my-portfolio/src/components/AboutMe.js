@@ -5,8 +5,12 @@ const AboutMe = () => {
     <section>
       <h2>About Me</h2>
       <div>
-        <img src="" alt="Hunters Avatar" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur. Viverra justo nec ultrices dui sapien eget mi. Leo vel orci porta non pulvinar neque. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Platea dictumst quisque sagittis purus sit amet volutpat. Sit amet consectetur adipiscing elit ut aliquam. Magna etiam tempor orci eu lobortis elementum nibh. At consectetur lorem donec massa sapien.</p>
+        <img 
+          src="/icon.png" 
+          alt="Developer's Avatar" 
+          style={{ maxWidth: '200px', maxHeight: '200px' }}
+        />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </section>
   );
