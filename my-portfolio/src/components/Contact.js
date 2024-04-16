@@ -26,7 +26,6 @@ const Contact = () => {
       alert('Please fill out your message.');
       return;
     }
-    // Send form data to backend or perform further actions
   };
 
   return (
