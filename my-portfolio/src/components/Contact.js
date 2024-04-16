@@ -8,22 +8,37 @@ const Contact = () => {
     message: ''
   });
 
+  const [validationMessages, setValidationMessages] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    if (!value.trim()) {
+      setValidationMessages({ ...validationMessages, [name]: `Please fill out ${name}` });
+    } else {
+      setValidationMessages({ ...validationMessages, [name]: '' });
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name) {
-      alert('Please fill out your name.');
+    if (!formData.name.trim()) {
+      setValidationMessages({ ...validationMessages, name: 'Please fill out Name' });
       return;
     }
-    if (!formData.email) {
-      alert('Please fill out your email.');
+    if (!formData.email.trim()) {
+      setValidationMessages({ ...validationMessages, email: 'Please fill out Email' });
       return;
     }
-    if (!formData.message) {
-      alert('Please fill out your message.');
+    if (!formData.message.trim()) {
+      setValidationMessages({ ...validationMessages, message: 'Please fill out Message' });
       return;
     }
   };
@@ -35,15 +50,38 @@ const Contact = () => {
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {validationMessages.name && <p>{validationMessages.name}</p>}
         </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {validationMessages.email && <p>{validationMessages.email}</p>}
         </div>
         <div className="form-group">
           <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" value={formData.message} onChange={handleChange} />
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {validationMessages.message && <p>{validationMessages.message}</p>}
         </div>
         <button type="submit" className="submit-button">Submit</button>
       </form>
