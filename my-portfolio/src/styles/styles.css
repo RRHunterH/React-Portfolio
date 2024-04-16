@@ -1,6 +1,7 @@
 
-body {
-    font-family: Arial, sans-serif;
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use a modern font family */
     margin: 0;
     padding: 0;
   }
