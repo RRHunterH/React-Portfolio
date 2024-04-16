@@ -5,7 +5,7 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header>
+    <header style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Header.jpg)` }}>
       <h1>Hunter's Portfolio</h1>
       <nav>
         <ul>
