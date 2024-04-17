@@ -1,14 +1,13 @@
 import React from 'react';
 import './Portfolio.css'; // Import CSS file for styling
 
-
 const Portfolio = () => {
   return (
     <section className="portfolio-container">
       <div className="background-image"></div>
       <h2 className="title">Portfolio</h2>
       <div className="projects">
-        {/* Music finder */}
+        {/* Music Finder */}
         <div className="project top-left">
           <h3 className="project-name">Music Finder</h3>
           <img src={process.env.PUBLIC_URL + '/Music Finder.png'} alt="Music Finder" className="project-image" />
@@ -21,8 +20,8 @@ const Portfolio = () => {
             </a> 
           </div>
         </div>
-         {/* Snout Route */}
-         <div className="project bottom-right">
+        {/* Snout Route */}
+        <div className="project bottom-right">
           <h3 className="project-name">Snout Route</h3>
           <img src={process.env.PUBLIC_URL + '/Snout Route.png'} alt="Project 4" className="project-image" />
           <div className="buttons">
@@ -73,7 +72,7 @@ const Portfolio = () => {
             </a>
           </div>
         </div>
-        {/*  Work Day Scheduler */}
+        {/* Work Day Scheduler */}
         <div className="project bottom-left">
           <h3 className="project-name">Work Day Scheduler</h3>
           <img src={process.env.PUBLIC_URL + '/Work Day Scheduler.png'} alt="Project 3" className="project-image" />

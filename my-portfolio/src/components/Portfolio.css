@@ -177,24 +177,37 @@ body {
     margin-top: 60px; /* Add margin to the top of projects 1 and 2 */
   }
 
-  .deployed-app-button,
-.github-repo-button {
-  background-color: #485758; /* Background color */
-  color: #fff; /* Text color */
-  padding: 12px 20px; /* Padding */
-  border: none; /* Remove border */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Cursor style */
-  font-size: 14px; /* Font size */
-  margin-right: 10px; /* Margin between buttons */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
 
-.deployed-app-button:hover,
-.github-repo-button:hover {
-  background-color: #0056b3; /* Background color on hover */
-}
+  .deployed-app-button,
+  .github-repo-button {
+      background-color: #008CBA; /* Change background color */
+      color: #fff;
+      padding: 10px 20px; /* Adjust padding */
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 10px;
+      transition: background-color 0.3s ease;
+  }
+  
+  .deployed-app-button:hover,
+  .github-repo-button:hover {
+      background-color: #0056b3;
+  }
 .portfolio-container {
     position: relative;
     z-index: 1;
   }
+
+.project:nth-child(2) .buttons,
+.project:nth-child(4) .buttons,
+.project:nth-child(6) .buttons {
+  left: 34%;
+}
+
+.project:nth-child(2):hover .buttons,
+.project:nth-child(4):hover .buttons,
+.project:nth-child(6):hover .buttons {
+  opacity: 1;
+}
