@@ -194,3 +194,7 @@ body {
 .github-repo-button:hover {
   background-color: #0056b3; /* Background color on hover */
 }
+.portfolio-container {
+    position: relative;
+    z-index: 1;
+  }
