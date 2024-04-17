@@ -2,13 +2,10 @@ import React from 'react';
 
 const Resume = () => {
   return (
-    <section>
+    <section className="resume-container">
       <h2>Resume</h2>
-      <div>
-        <a href="resume.pdf" download>Download Resume</a>
-        <ul>
-          {/* List of proficiencies */}
-        </ul>
+      <div className="resume-download">
+        <a href={process.env.PUBLIC_URL + '/Resume.txt'} download>Download Resume</a>
       </div>
     </section>
   );
